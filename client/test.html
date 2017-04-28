@@ -1,7 +1,19 @@
 <img src="back1.jpeg" id="image1">
+<img src="back1.jpeg" class="t1">
+<img src="back1.jpeg" class="t1">
+<img src="back1.jpeg" class="t1">
+<img src="back1.jpeg" class="t1">
+<img src="back1.jpeg" class="p1">
+<img src="back1.jpeg" class="p1">
+<img src="back1.jpeg" class="p1">
+<img src="back1.jpeg" class="t1">
 <script src="color-filter.js">
 </script>
 <script>
-    const colorFilter = new ColorFilter('image1')
-    colorFilter.filter('#009688')
+    const greenColorFilter = new ColorFilter('#image1')
+    greenColorFilter.filter('#009688')
+    const orangeColorFilter = new ColorFilter('.t1')
+    orangeColorFilter.filter('#F57C00')
+    const blueColorFilter = new ColorFilter('.p1')
+    blueColorFilter.filter('#3F51B5')
 </script>

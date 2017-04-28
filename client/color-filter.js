@@ -1,6 +1,7 @@
 class ColorFilter {
     constructor(imId) {
         const imageElement = document.getElementById(imId)
+        this.imageElement = imageElement
         this.image = new Image()
         this.image.src = imageElement.src
         this.imageLoaded = false
@@ -21,12 +22,13 @@ class ColorFilter {
             context.fillStyle = color
             context.globalAlpha = 0.5
             context.fillRect(0,0,canvas.width,canvas.height)
-            const dataUrl = canvas.getDataURL()
+            const dataUrl = canvas.toDataURL()
+            this.imageElement.src = dataUrl
             console.log(dataUrl)
         }
         else {
             setTimeout(()=>{
-                filter(color)
+                this.filter(color)
             },1000)
         }
     }
